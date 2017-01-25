@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/movie_item_cardview_margin">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/title_view"
+                        android:ellipsize="end"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="16sp"
+                        android:padding="@dimen/layout_default_margin"
+                        android:maxLines="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/overview_view"
+                        android:ellipsize="end"
+                        android:paddingRight="@dimen/layout_default_margin"
+                        android:paddingLeft="@dimen/layout_default_margin"
+                        android:maxLines="7"
+                        android:layout_below="@+id/title_view" />
+
+                    <View android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_line_separator_height"
+                        android:layout_alignBottom="@+id/overview_view"
+                        android:layout_marginRight="@dimen/layout_line_separator_margin"
+                        android:layout_marginLeft="@dimen/layout_line_separator_margin"
+                        android:background="@color/layout_line_separate_color" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:adjustViewBounds="true"
+                    android:id="@+id/poster_view"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:layout_weight="2"
+                    app:srcCompat="@drawable/no_poster"
+                    android:contentDescription="@null"
+                    tools:ignore="ContentDescription" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textSize="16sp"
+                    android:ellipsize="end"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_more"
+                    android:layout_margin="@dimen/layout_default_margin"
+                    android:maxLines="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_margin="@dimen/layout_default_margin"
+                    tools:ignore="RelativeOverlap">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vote_average_view"
+                        android:textSize="14sp"
+                        android:layout_marginRight="@dimen/text_star_vote_margin"
+                        android:layout_marginEnd="@dimen/text_star_vote_margin"
+                        android:layout_gravity="bottom" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_star_grey_18dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

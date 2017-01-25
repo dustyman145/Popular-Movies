@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/movie_item_cardview_margin">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:id="@+id/poster_view"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:clickable="false"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/no_poster"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:id="@+id/title_view"
+                android:layout_margin="@dimen/movie_item_cardview_margin"
+                android:textColor="@color/dark_grey" />
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/movie_item_cardview_margin"
+                android:layout_marginEnd="@dimen/movie_item_cardview_margin"
+                android:layout_marginLeft="@dimen/movie_item_cardview_margin"
+                android:layout_marginRight="@dimen/movie_item_cardview_margin"
+                android:layout_marginStart="@dimen/movie_item_cardview_margin"
+                android:layout_gravity="end">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:ignore="RelativeOverlap"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/vote_average_view"
+                        android:textSize="14sp"
+                        android:layout_marginRight="@dimen/text_star_vote_margin"
+                        android:layout_marginEnd="@dimen/text_star_vote_margin"
+                        android:layout_gravity="bottom"
+                        tools:ignore="RelativeOverlap" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_star_grey_18dp"
+                        android:contentDescription="@null" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

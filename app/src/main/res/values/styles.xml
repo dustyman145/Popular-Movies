@@ -1,0 +1,39 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:tabWidgetStyle">@style/TabLayoutStyle</item>
+    </style>
+
+    <!-- Base widget theme. -->
+    <style name="TabLayoutStyle" parent="Base.Widget.Design.TabLayout">
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/white</item>
+        <item name="tabTextAppearance">@style/TabTexStyle</item>
+        <item name="tabBackground">@color/colorPrimary</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="android:fillViewport">true</item>
+    </style>
+
+    <style name="TabTexStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+    <style name="PersistentSearchBarStyle">
+        <item name="floatingSearch_close_search_on_keyboard_dismiss">true</item>
+        <item name="floatingSearch_leftActionMode">showSearch</item>
+        <item name="floatingSearch_searchBarMarginLeft">@dimen/persistent_search_bar_margin</item>
+        <item name="floatingSearch_searchBarMarginRight">@dimen/persistent_search_bar_margin</item>
+        <item name="floatingSearch_searchBarMarginTop">@dimen/persistent_search_bar_margin</item>
+        <item name="floatingSearch_searchHint">@string/search_hint</item>
+        <item name="floatingSearch_showSearchKey">true</item>
+        <item name="floatingSearch_suggestionsListAnimDuration">250</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+</resources>

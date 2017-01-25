@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="persistent_search_holder_height">68dp</dimen>
+    <dimen name="tab_shadow_height">4dp</dimen>
+    <dimen name="text_star_vote_margin">4dp</dimen>
+    <dimen name="persistent_search_bar_margin">8dp</dimen>
+    <dimen name="layout_line_separator_margin">8dp</dimen>
+    <dimen name="layout_line_separator_height">0.6dp</dimen>
+    <dimen name="movie_item_cardview_margin">6dp</dimen>
+    <dimen name="layout_default_margin">12dp</dimen>
+</resources>
